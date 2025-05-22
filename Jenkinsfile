@@ -7,7 +7,7 @@ node {
          
      }
      stage('Push image') {
-         docker.withRegistry('https://ec2-52-79-243-27.ap-northeast-2.compute.amazonaws.com/', 'harbor-reg') {
+         docker.withRegistry('ec2-43-203-238-208.ap-northeast-2.compute.amazonaws.com/', 'harbor-reg') {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
          }
